@@ -6,6 +6,9 @@ int check(string str){
     if(str.size() < 2){
         return 0;
     }
+    if(str[str.size()] != 'b'){
+        return 0;
+    }
 
     if (str[0] == 'b')
     {
