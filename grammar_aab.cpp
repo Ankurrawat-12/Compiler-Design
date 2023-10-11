@@ -3,23 +3,12 @@
 using namespace std;
 
 int check(string str){
-    if(str.size() < 2){
-        return 0;
-    }
-    if(str[str.size()] != 'b'){
+
+    if(str.size() < 2 || str[str.size() -1 ] != 'b' || str[0] == 'b'){
         return 0;
     }
 
-    if (str[0] == 'b')
-    {
-        return 0;
-    }
-    if (str[str.size ()] == 'a')
-    {
-        return 0;
-    }
-
-    for (int i = 0; i < str.size (); i++)
+    for (int i = 0; i < str.size() - 1; i++)
     {
         if (str[i] != 'a' && str[i] != 'b') return 0;
         if (str[i] == 'b' && str[i + 1] == 'a') return 0;
